@@ -255,6 +255,7 @@
 			);
 			name = "Build libssh2";
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/lib/libssh2.a",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
