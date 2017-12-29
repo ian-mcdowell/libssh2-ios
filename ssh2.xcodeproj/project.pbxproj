@@ -6,14 +6,52 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3CB475CD1FF6014000C6B265 /* libssh2 */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3CB475CE1FF6014100C6B265 /* Build configuration list for PBXAggregateTarget "libssh2" */;
+			buildPhases = (
+				3CB475DE1FF602F500C6B265 /* Build libssh2 */,
+			);
+			dependencies = (
+			);
+			name = libssh2;
+			productName = libssh2;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3CB475C71FF600A700C6B265 /* ssh2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB475C51FF600A700C6B265 /* ssh2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB475E51FF603EB00C6B265 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB475E21FF603EB00C6B265 /* libcrypto.a */; };
+		3CB475E61FF603EB00C6B265 /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB475E31FF603EB00C6B265 /* libssh2.a */; };
+		3CB475E71FF603EB00C6B265 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB475E41FF603EB00C6B265 /* libssl.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CB475D11FF6014700C6B265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB475B91FF600A700C6B265 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CB475CD1FF6014000C6B265;
+			remoteInfo = libssh2;
+		};
+		3CB475D91FF601C500C6B265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CB475D41FF601C500C6B265 /* ssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3CB475801FF5C40300C6B265;
+			remoteInfo = ssl;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3CB475C21FF600A700C6B265 /* ssh2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ssh2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475C51FF600A700C6B265 /* ssh2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssh2.h; sourceTree = "<group>"; };
 		3CB475C61FF600A700C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CB475D41FF601C500C6B265 /* ssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ssl.xcodeproj; path = "Submodules/openssl-ios/ssl.xcodeproj"; sourceTree = "<group>"; };
+		3CB475E21FF603EB00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../Users/ian/Library/Developer/Xcode/DerivedData/ssh2-auylhilwzdxffqfjlyiavkaieoyn/Build/Products/Debug-iphoneos/lib/libcrypto.a"; sourceTree = "<group>"; };
+		3CB475E31FF603EB00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = "../../../../Users/ian/Library/Developer/Xcode/DerivedData/ssh2-auylhilwzdxffqfjlyiavkaieoyn/Build/Products/Debug-iphoneos/lib/libssh2.a"; sourceTree = "<group>"; };
+		3CB475E41FF603EB00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../Users/ian/Library/Developer/Xcode/DerivedData/ssh2-auylhilwzdxffqfjlyiavkaieoyn/Build/Products/Debug-iphoneos/lib/libssl.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB475E51FF603EB00C6B265 /* libcrypto.a in Frameworks */,
+				3CB475E61FF603EB00C6B265 /* libssh2.a in Frameworks */,
+				3CB475E71FF603EB00C6B265 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,8 +71,11 @@
 		3CB475B81FF600A700C6B265 = {
 			isa = PBXGroup;
 			children = (
+				3CB475E81FF6044400C6B265 /* include */,
+				3CB475D31FF601B500C6B265 /* Dependencies */,
 				3CB475C41FF600A700C6B265 /* Framework */,
 				3CB475C31FF600A700C6B265 /* Products */,
+				3CB475E11FF603EB00C6B265 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +94,39 @@
 				3CB475C61FF600A700C6B265 /* Info.plist */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		3CB475D31FF601B500C6B265 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				3CB475D41FF601C500C6B265 /* ssl.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		3CB475D51FF601C500C6B265 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CB475DA1FF601C500C6B265 /* ssl.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CB475E11FF603EB00C6B265 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CB475E21FF603EB00C6B265 /* libcrypto.a */,
+				3CB475E31FF603EB00C6B265 /* libssh2.a */,
+				3CB475E41FF603EB00C6B265 /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3CB475E81FF6044400C6B265 /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +155,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3CB475D21FF6014700C6B265 /* PBXTargetDependency */,
 			);
 			name = ssh2;
 			productName = ssh2;
@@ -97,6 +175,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					3CB475CD1FF6014000C6B265 = {
+						CreatedOnToolsVersion = 9.2;
+					};
 				};
 			};
 			buildConfigurationList = 3CB475BC1FF600A700C6B265 /* Build configuration list for PBXProject "ssh2" */;
@@ -109,12 +190,29 @@
 			mainGroup = 3CB475B81FF600A700C6B265;
 			productRefGroup = 3CB475C31FF600A700C6B265 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3CB475D51FF601C500C6B265 /* Products */;
+					ProjectRef = 3CB475D41FF601C500C6B265 /* ssl.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3CB475C11FF600A700C6B265 /* ssh2 */,
+				3CB475CD1FF6014000C6B265 /* libssh2 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3CB475DA1FF601C500C6B265 /* ssl.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ssl.framework;
+			remoteRef = 3CB475D91FF601C500C6B265 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3CB475C01FF600A700C6B265 /* Resources */ = {
@@ -126,6 +224,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CB475DE1FF602F500C6B265 /* Build libssh2 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Submodules/libssh2",
+			);
+			name = "Build libssh2";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/Submodules/ios-xcode-make-scripts/build-cmake-staticlib -DBUILD_SHARED_LIBS=OFF -DBUILD_EXAMPLES=OFF -DBUILD_TESTING=OFF -DCRYPTO_BACKEND=OpenSSL -DOPENSSL_ROOT_DIR=$BUILT_PRODUCTS_DIR";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3CB475BD1FF600A700C6B265 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -135,6 +251,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CB475D21FF6014700C6B265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CB475CD1FF6014000C6B265 /* libssh2 */;
+			targetProxy = 3CB475D11FF6014700C6B265 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3CB475C81FF600A700C6B265 /* Debug */ = {
@@ -166,7 +290,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -186,10 +310,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -224,7 +349,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -238,9 +363,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -250,40 +376,50 @@
 		3CB475CB1FF600A700C6B265 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = A8DZBD3K9C;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ssh2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.ssh2;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		3CB475CC1FF600A700C6B265 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = A8DZBD3K9C;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ssh2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.ssh2;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3CB475CF1FF6014100C6B265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBNAMES = libssh2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3CB475D01FF6014100C6B265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBNAMES = libssh2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -304,6 +440,15 @@
 			buildConfigurations = (
 				3CB475CB1FF600A700C6B265 /* Debug */,
 				3CB475CC1FF600A700C6B265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CB475CE1FF6014100C6B265 /* Build configuration list for PBXAggregateTarget "libssh2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CB475CF1FF6014100C6B265 /* Debug */,
+				3CB475D01FF6014100C6B265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
