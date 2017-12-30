@@ -20,7 +20,19 @@
             <string>master</string>
         </dict>
     </array>
+    <key>libraryOutputs</key>
+    <array>
+        <string>libssh2</string>
+    </array>
     <key>buildSystem</key>
     <string>cmake</string>
+    <key>buildArgs</key>
+    <array>
+        <string>-DBUILD_SHARED_LIBS=OFF</string>
+        <string>-DBUILD_EXAMPLES=OFF</string>
+        <string>-DBUILD_TESTING=OFF</string>
+        <string>-DCRYPTO_BACKEND=OpenSSL</string>
+        <string>-DOPENSSL_ROOT_DIR=$#BUILDROOT#</string>
+    </array>
 </dict>
 </plist>
