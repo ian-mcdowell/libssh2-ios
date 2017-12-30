@@ -20,5 +20,7 @@
             <string>master</string>
         </dict>
     </array>
+    <key>buildSystem</key>
+    <string>cmake</string>
 </dict>
 </plist>
