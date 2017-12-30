@@ -30,12 +30,12 @@
 		3CB475C21FF600A700C6B265 /* ssh2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ssh2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475C51FF600A700C6B265 /* ssh2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssh2.h; sourceTree = "<group>"; };
 		3CB475C61FF600A700C6B265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB475E21FF603EB00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = .ibuild/build/lib/libcrypto.a; sourceTree = SOURCE_ROOT; };
-		3CB475E31FF603EB00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = .ibuild/build/lib/libssh2.a; sourceTree = SOURCE_ROOT; };
-		3CB475E41FF603EB00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = .ibuild/build/lib/libssl.a; sourceTree = SOURCE_ROOT; };
-		3CB475E91FF6052A00C6B265 /* libssh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2.h; path = .ibuild/build/include/libssh2.h; sourceTree = SOURCE_ROOT; };
-		3CB475EA1FF6052A00C6B265 /* libssh2_publickey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2_publickey.h; path = .ibuild/build/include/libssh2_publickey.h; sourceTree = SOURCE_ROOT; };
-		3CB475EB1FF6052A00C6B265 /* libssh2_sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2_sftp.h; path = .ibuild/build/include/libssh2_sftp.h; sourceTree = SOURCE_ROOT; };
+		3CB475E21FF603EB00C6B265 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ibuild/lib/libcrypto.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB475E31FF603EB00C6B265 /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssh2.a; path = ibuild/lib/libssh2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB475E41FF603EB00C6B265 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ibuild/lib/libssl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB475E91FF6052A00C6B265 /* libssh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2.h; path = ibuild/include/libssh2.h; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB475EA1FF6052A00C6B265 /* libssh2_publickey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2_publickey.h; path = ibuild/include/libssh2_publickey.h; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB475EB1FF6052A00C6B265 /* libssh2_sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2_sftp.h; path = ibuild/include/libssh2_sftp.h; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,7 +342,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/.ibuild/build/lib";
+				LIBRARY_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/ibuild/lib";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.ssh2;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -360,7 +360,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/.ibuild/build/lib";
+				LIBRARY_SEARCH_PATHS = "$(TARGET_BUILD_DIR)/ibuild/lib";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = net.ianmcdowell.ssh2;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
