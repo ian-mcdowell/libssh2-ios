@@ -1,4 +1,4 @@
-# OpenSSL for iOS
+# libSSH2 for iOS
 
 <p align="center">
   <a href="https://github.com/IMcD23/openssl-ios">openssl-ios</a> &bull;
