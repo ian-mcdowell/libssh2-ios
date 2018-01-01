@@ -4,37 +4,42 @@
 <dict>
     <key>name</key>
     <string>libssh2-ios</string>
-    <key>url</key>
-    <string>https://github.com/IMcD23/libssh2-ios.git</string>
-    <key>library</key>
+    <key>build</key>
     <dict>
-        <key>url</key>
-        <string>https://github.com/libssh2/libssh2.git</string>
-        <key>branch</key>
-        <string>master</string>
+        <key>location</key>
+        <dict>
+            <key>type</key>
+            <string>github</string>
+            <key>path</key>
+            <string>libssh2/libssh2</string>
+            <key>branch</key>
+            <string>master</string>
+        </dict>
+        <key>buildSystem</key>
+        <string>cmake</string>
+        <key>buildArgs</key>
+        <array>
+            <string>-DBUILD_SHARED_LIBS=OFF</string>
+            <string>-DBUILD_EXAMPLES=OFF</string>
+            <string>-DBUILD_TESTING=OFF</string>
+            <string>-DCRYPTO_BACKEND=OpenSSL</string>
+            <string>-DOPENSSL_ROOT_DIR=$#BUILDROOT#</string>
+        </array>
+        <key>outputs</key>
+        <array>
+            <string>lib/libssh2.a</string>
+        </array>
     </dict>
     <key>dependencies</key>
     <array>
         <dict>
-            <key>url</key>
-            <string>https://github.com/IMcD23/openssl-ios.git</string>
+            <key>type</key>
+            <string>github</string>
+            <key>path</key>
+            <string>IMcD23/openssl-ios</string>
             <key>branch</key>
             <string>master</string>
         </dict>
-    </array>
-    <key>libraryOutputs</key>
-    <array>
-        <string>libssh2</string>
-    </array>
-    <key>buildSystem</key>
-    <string>cmake</string>
-    <key>buildArgs</key>
-    <array>
-        <string>-DBUILD_SHARED_LIBS=OFF</string>
-        <string>-DBUILD_EXAMPLES=OFF</string>
-        <string>-DBUILD_TESTING=OFF</string>
-        <string>-DCRYPTO_BACKEND=OpenSSL</string>
-        <string>-DOPENSSL_ROOT_DIR=$#BUILDROOT#</string>
     </array>
 </dict>
 </plist>
