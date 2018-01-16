@@ -36,6 +36,7 @@
 		3CB475E91FF6052A00C6B265 /* libssh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2.h; path = ibuild/include/libssh2.h; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475EA1FF6052A00C6B265 /* libssh2_publickey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2_publickey.h; path = ibuild/include/libssh2_publickey.h; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB475EB1FF6052A00C6B265 /* libssh2_sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libssh2_sftp.h; path = ibuild/include/libssh2_sftp.h; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE064B2200DF1A900680549 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 			children = (
 				3CB475C51FF600A700C6B265 /* ssh2.h */,
 				3CB475C61FF600A700C6B265 /* Info.plist */,
+				3CE064B2200DF1A900680549 /* module.modulemap */,
 			);
 			path = Framework;
 			sourceTree = "<group>";

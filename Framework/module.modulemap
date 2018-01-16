@@ -1,0 +1,4 @@
+module ssh2 [system] {
+    umbrella header "ssh2.h"
+    export *
+}
