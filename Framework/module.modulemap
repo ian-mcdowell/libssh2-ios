@@ -1,4 +1,14 @@
-module ssh2 [system] {
-    umbrella header "ssh2.h"
+framework module ssh2 [system] {
+    header "libssh2.h"
     export *
+
+    module sftp {
+        header "libssh2_sftp.h"
+        export *
+    }
+
+    module publickey {
+        header "libssh2_publickey.h"
+        export *
+    }
 }
